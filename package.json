@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "npx prisma generate && env $(cat env.local | xargs) npx prisma migrate dev",
-    "export": "$(cat .env | xargs)"
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "schema": "src/db/schema.prisma"
